@@ -1,0 +1,128 @@
+@keyframes trans60 {
+  100% {
+    transform: translateX(60px);
+  }
+}
+
+@keyframes trans30 {
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake3 {
+  50% {
+    -webkit-transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(-3px);
+  }
+}
+@keyframes shake1 {
+  50% {
+    -webkit-transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(-1px);
+  }
+}
+
+@keyframes light1 {
+  25% {
+    background: url(../assets/dns/animation_DNS_symbol07.png);
+  }
+  50%{
+    background: url(../assets/dns/animation_DNS_symbol04.png);
+  }
+  750% {
+    background: url(../assets/dns/animation_DNS_symbol05.png);
+  }
+  100% {
+    background: url(../assets/dns/animation_DNS_symbol06.png);
+  }
+}
+@keyframes light2 {
+  25% {
+    background: url(../assets/isp/animation_ISP_symbol03.png);
+  }
+  50%{
+    background: url(../assets/isp/animation_ISP_symbol04.png);
+  }
+  750% {
+    background: url(../assets/isp/animation_ISP_symbol05.png);
+  }
+  100% {
+    background: url(../assets/isp/animation_ISP_symbol06.png);
+  }
+}
+@keyframes light3 {
+  25% {
+    background: url(../assets/isp/animation_ISP_symbol07.png);
+  }
+  50%{
+    background: url(../assets/isp/animation_ISP_symbol08.png);
+  }
+  750% {
+    background: url(../assets/isp/animation_ISP_symbol09.png);
+  }
+  100% {
+    background: url(../assets/isp/animation_ISP_symbol10.png);
+  }
+}
+
+@keyframes retate20 {
+  25% {
+    transform: rotate(5deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes retate30 {
+  25% {
+    transform: rotate(-15deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveDown{
+  25% {
+    -webkit-transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+  }
+  75% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+  }
+}
