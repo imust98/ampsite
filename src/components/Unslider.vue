@@ -53,13 +53,13 @@
             this.index = 0
           }
           this.zIndexList[this.index] = Math.max(...this.zIndexList) + 1
-          console.log(this.zIndexList)
         }.bind(this), this.time)
       },
       go: function (index) {
         this.stop()
         this.index = index
         this.zIndexList[this.index] = Math.max(...this.zIndexList) + 1
+        this.play()
       },
       stop: function () {
         clearInterval(this.interval)
