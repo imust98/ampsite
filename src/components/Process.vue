@@ -135,7 +135,8 @@
       width: 250px;
       top: 0px;
       h4 {
-        padding-top: 20px;
+        padding-top: 40px;
+        padding-bottom: 10px;
         font-size: 18px;
         color: #333;
         font-weight: normal;
@@ -196,6 +197,10 @@
     .app, .dns, .isp, .cdn, .server {
       position: relative;
       cursor: pointer;
+      p{
+        padding-top: 18px;
+        text-align: center;
+      }
     }
     @mixin ems {
       position: absolute;
