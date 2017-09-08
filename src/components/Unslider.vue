@@ -1,6 +1,6 @@
 <template>
   <div class="m-banner">
-    <div class="slider">
+    <div class="unslider">
       <ul>
         <li style="background: red" v-bind:style="{zIndex:zIndexList[0]}" v-bind:class="{active:index === 0}">
           <div class="text">
@@ -45,6 +45,9 @@
         zIndexList: [1, 0, 0]
       }
     },
+    mounted: function () {
+      this.play()
+    },
     methods: {
       play: function () {
         this.interval = setInterval(function () {
@@ -69,11 +72,12 @@
 </script>
 <style lang="scss" rel="stylesheet/scss">
   @import '../style/base.scss';
+  @import '../style/common.scss';
   @import '../style/keyframes.scss';
 
   .m-banner {
     position: relative;
-    .slider {
+    .unslider {
       ul {
         position: relative;
       }
@@ -114,7 +118,7 @@
       width: 1200px;
       display: flex;
       margin: 0px auto;
-      z-index: 99;
+      z-index: 9999;
       ul {
         display: flex;
         align-content: center;
@@ -138,24 +142,6 @@
           }
         }
       }
-    }
-    .btn {
-      display: inline-block;
-      padding: 15px 40px;
-      border-radius: 2px;
-      color: #fff;
-      font-size: 16px;
-    }
-    .btn-primary {
-      background: rgba(74, 118, 179, 1);
-      transition: background 1s;
-      &:hover {
-        background: rgba(74, 118, 179, 0.8);
-      }
-    }
-    .btn-default {
-      background: transparent;
-      border: 1px solid #fff;
     }
   }
 </style>

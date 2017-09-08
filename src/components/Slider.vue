@@ -1,52 +1,55 @@
 <template>
   <div class="m-slider">
-    <div class="prev" v-on:click="prev()"></div>
-    <div class="slider" v-on:mouseover="stop()" v-on:mouseleave="restart()">
-      <ul class="sliderlist">
-        <li>
-          <div class="abstract">
-            <img src="" alt="">
-            <div class="person">
-              <div class="pname">寿丽丹</div>
-              <div class="ptitle">浙江大学 计算机教授</div>
+    <h2>他们都在使用APM</h2>
+    <div class="wrap-slider">
+      <div class="prev" v-on:click="prev()"></div>
+      <div class="slider" v-on:mouseover="stop()" v-on:mouseleave="restart()">
+        <ul class="sliderlist">
+          <li>
+            <div class="abstract">
+              <img src="" alt="">
+              <div class="person">
+                <div class="pname">寿丽丹</div>
+                <div class="ptitle">浙江大学 计算机教授</div>
+              </div>
             </div>
-          </div>
-          <p>网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐</p>
-        </li>
-        <li>
-          <div class="abstract">
-            <img src="" alt="">
-            <div class="person">
-              <div class="pname">王文霞</div>
-              <div class="ptitle">浙江大学 计算机教授</div>
+            <p>网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐</p>
+          </li>
+          <li>
+            <div class="abstract">
+              <img src="" alt="">
+              <div class="person">
+                <div class="pname">王文霞</div>
+                <div class="ptitle">浙江大学 计算机教授</div>
+              </div>
             </div>
-          </div>
-          <p>
-            网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐</p>
-        </li>
-        <li>
-          <div class="abstract">
-            <img src="" alt="">
-            <div class="person">
-              <div class="pname">刘志军</div>
-              <div class="ptitle">浙江大学 计算机教授</div>
+            <p>
+              网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐</p>
+          </li>
+          <li>
+            <div class="abstract">
+              <img src="" alt="">
+              <div class="person">
+                <div class="pname">刘志军</div>
+                <div class="ptitle">浙江大学 计算机教授</div>
+              </div>
             </div>
-          </div>
-          <p>网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐</p>
-        </li>
-        <li>
-          <div class="abstract">
-            <img src="" alt="">
-            <div class="person">
-              <div class="pname">吴绮莉</div>
-              <div class="ptitle">浙江大学 计算机教授</div>
+            <p>网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐</p>
+          </li>
+          <li>
+            <div class="abstract">
+              <img src="" alt="">
+              <div class="person">
+                <div class="pname">吴绮莉</div>
+                <div class="ptitle">浙江大学 计算机教授</div>
+              </div>
             </div>
-          </div>
-          <p>网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐</p>
-        </li>
-      </ul>
+            <p>网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐乐网易云音乐</p>
+          </li>
+        </ul>
+      </div>
+      <div class="next" v-on:click="next()"></div>
     </div>
-    <div class="next" v-on:click="next()"></div>
   </div>
 </template>
 <script>
@@ -60,6 +63,9 @@
         speed: 1000,
         interval: undefined
       }
+    },
+    mounted: function () {
+      this.play()
     },
     methods: {
       play: function () {
@@ -87,7 +93,7 @@
       moveLeft: function () {
         let self = this
         $('ul.sliderlist li:first').animate({'margin-left': '-380px'}, this.speed, function () {
-          $(this).css('margin-left', '10px').appendTo($('ul'))
+          $(this).css('margin-left', '10px').appendTo($('ul.sliderlist'))
           if (self.stopTag) return
           if (!self.interval) {
             self.play()
@@ -96,7 +102,7 @@
       },
       moveRight: function () {
         let self = this
-        $('ul.sliderlist li:last').prependTo($('ul'))
+        $('ul.sliderlist li:last').prependTo($('ul.sliderlist'))
         $('ul.sliderlist li:first').css('margin-left', '-380px').animate({'margin-left': '10px'}, this.speed, function () {
           if (self.stopTag) return
           if (!self.interva) {
@@ -120,12 +126,21 @@
 </script>
 <style lang="scss" rel="stylesheet/scss">
   @import '../style/base.scss';
+  @import '../style/common.scss';
   @import '../style/keyframes.scss';
 
   .m-slider {
-    position: relative;
     background: #f4fafa;
     padding: 80px 0px;
+    h2{
+      font-size: 34px;
+      color: #454545;
+      padding-bottom: 88px;
+      text-align: center;
+    }
+    .wrap-slider{
+      position: relative;
+    }
     .slider {
       width: 1200px;
       margin: 0px auto;

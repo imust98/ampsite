@@ -1,21 +1,23 @@
 <template>
-  <div class="m-slider">
-    <div class="slider">
-      <div class="slider_image slider_dns" v-bind:class="{active:index===0}">
+  <div class="m-process">
+    <h2>在故障大面积影响用户前快速定位修复</h2>
+    <h3>从用户终端，到网络，直到服务端，定位性能瓶颈</h3>
+    <div class="process">
+      <div class="process_image process_dns" v-bind:class="{active:index===0}">
         <img src="../assets/dns/website_DNS_tips.png" alt="">
         <div class="description">
           <h4>DNS劫持监控</h4>
           <p>全面监控DNS和内容劫持分析，帮助您及时发现劫持最严重的URL，并定位到劫持主机，让您的app远离劫持风险 </p>
         </div>
       </div>
-      <div class="slider_image slider_isp" v-bind:class="{active:index===1}">
+      <div class="process_image process_isp" v-bind:class="{active:index===1}">
         <img src="../assets/isp/website_ISP_tips.png" alt="">
         <div class="description">
           <h4>ISP网络质量问题分析 </h4>
           <p>精确分析网络出错和慢响应请求，并可通过具体的诊断信息，判断出现问题时的网络状态，方便问题归因。</p>
         </div>
       </div>
-      <div class="slider_image slider_cdn" v-bind:class="{active:index===2}">
+      <div class="process_image process_cdn" v-bind:class="{active:index===2}">
         <img src="../assets/cdn/website_CDN_tips.png" alt="">
         <div class="description">
           <h4>CDN性能分析</h4>
@@ -73,6 +75,9 @@
         time: 5000
       }
     },
+    mounted: function () {
+      this.play()
+    },
     methods: {
       play: function () {
         this.interval = setInterval(function () {
@@ -96,13 +101,31 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" rel="stylesheet/scss">
+  @import '../style/base.scss';
+  @import '../style/common.scss';
   @import '../style/keyframes.scss';
-
-  .m-slider {
+  .m-process {
     width: 1200px;
+    padding-top: 80px;
+    margin: 0px auto;
+    h2{
+      font-size: 34px;
+      color:#454545;
+      font-weight: normal;
+      text-align: center;
+      padding-bottom: 20px;
+
+    }
+    h3{
+      font-size: 16px;
+      color: #666;
+      padding-bottom: 74px;
+      font-weight: normal;
+      text-align: center;
+    }
   }
 
-  .slider {
+  .process {
     position: relative;
     width: 100%;
     height: 255px;
@@ -123,7 +146,7 @@
         color: #838383;
       }
     }
-    .slider_image {
+    .process_image {
       position: absolute;
       img, .description {
         display: none;
@@ -141,21 +164,21 @@
         }
       }
     }
-    .slider_dns {
+    .process_dns {
       left: 225px;
       top: 0px;
       .description {
         left: 515px;
       }
     }
-    .slider_isp {
+    .process_isp {
       left: 260px;
       top: 0px;
       .description {
         left: 480px;
       }
     }
-    .slider_cdn {
+    .process_cdn {
       left: 455px;
       top: 0px;
       .description {

@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: rgba(74, 118, 179, 1);
+  transition: background 1s;
+  &:hover {
+    background: rgba(74, 118, 179, 0.8);
+  }
+}
+
+.btn-default {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+$aa: "#fff"
