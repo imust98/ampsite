@@ -38,22 +38,22 @@
             <li>
               <img src="./assets/website_advantage01.png" alt="">
               <h3>19年积累</h3>
-              <p>网易19年技术积累全面开放，提供最专业的网络性能监控能力</p>
+              <p>一网19年技术积累全面开放，提供最专业的网络性能监控能力</p>
             </li>
             <li>
               <img src="./assets/website_advantage02.png" alt="">
               <h3>19年积累</h3>
-              <p>网易19年技术积累全面开放，提供最专业的网络性能监控能力</p>
+              <p>一网19年技术积累全面开放，提供最专业的网络性能监控能力</p>
             </li>
             <li>
               <img src="./assets/website_advantage03.png" alt="">
               <h3>19年积累</h3>
-              <p>网易19年技术积累全面开放，提供最专业的网络性能监控能力</p>
+              <p>一网19年技术积累全面开放，提供最专业的网络性能监控能力</p>
             </li>
             <li>
               <img src="./assets/website_advantage04.png" alt="">
               <h3>19年积累</h3>
-              <p>网易19年技术积累全面开放，提供最专业的网络性能监控能力</p>
+              <p>一网19年技术积累全面开放，提供最专业的网络性能监控能力</p>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
       <div class="m-foot">
         <div class="copyright">
           <img src="" alt="">
-          <p>网易公司版权所有 © 1997-2017</p>
+          <p>一网公司版权所有 © 1997-2017</p>
           <p>增值电信业务经营许可证 B1.B2-20090185</p>
           <p>浙ICP备17006647号-2</p>
         </div>
@@ -97,7 +97,7 @@
               <ul>
                 <li><a href="">渠道合作</a></li>
                 <li><a href="">GPS推广合作</a></li>
-                <li><a href="">邮箱：zhangpin@163.com</a></li>
+                <li><a href="">邮箱：xxx@163.com</a></li>
               </ul>
             </li>
           </ul>
